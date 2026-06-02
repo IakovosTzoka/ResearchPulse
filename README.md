@@ -1,116 +1,80 @@
-🧠 Research Pulse
+# Research Pulse
 
-Turn Doomscrolling into Discovery
+Research Pulse is a Firefox extension that replaces short-form scrolling with research papers from arXiv.
 
-Research Pulse is a Firefox extension that intercepts short-form distraction (YouTube Shorts, Instagram Reels, TikTok) and replaces it with real academic curiosity. Instead of blocking your time, it redirects your attention to cutting-edge research from arXiv, personalized to your interests.
+The idea came from a simple observation: many of us open YouTube Shorts, Instagram Reels, or TikTok looking for something interesting, but end up wasting time scrolling. Research Pulse redirects that impulse toward discovering new research instead.
 
-This is not a productivity nanny.
-It’s an intervention.
+Rather than blocking websites entirely, the extension presents a paper related to your interests whenever you visit a supported distraction platform.
 
-⸻
+## What Happens
 
-🚀 What It Does
+When you open YouTube Shorts, Instagram Reels, or TikTok, Research Pulse:
 
-When you open a known distraction site:
-	•	🔕 Instantly silences autoplaying media
-	•	🛑 Temporarily hides the page
-	•	🧠 Launches a full-screen Research Intervention UI
-	•	📄 Presents a randomly selected arXiv paper based on your interests
-	•	📊 Tracks time reclaimed, papers read, streaks, and academic “rank”
-	•	🔍 Redirects curiosity into structured research searches
+* Mutes autoplaying media
+* Hides the scrolling interface
+* Displays a research paper selected from arXiv
+* Tracks the time you spend away from short-form content
 
-You can still opt out — but you’ll have to own that decision.
+You can still continue to the original site if you want. The goal is not to prevent access, but to create a moment to reconsider how you spend your attention.
 
-⸻
+## Research Feed
 
-✨ Core Features
+During setup, you select the subjects that interest you. Research Pulse then pulls recently submitted papers from arXiv and presents them at random.
 
-🧬 Intelligent Distraction Detection
+Supported categories include:
 
-Automatically triggers on:
-	•	YouTube Shorts
-	•	Instagram Reels
-	•	TikTok
+* High Energy Physics
+* Condensed Matter Physics
+* Quantum Physics
+* Computer Science
+* Mathematics
+* Electrical Engineering
+* Statistics
+* Quantitative Biology
+* Quantitative Finance
 
-No permissions beyond page access. No background spying.
+Paper abstracts are displayed directly inside the extension, including support for LaTeX equations through MathJax.
 
-⸻
+## Progress Tracking
 
-📚 Personalized Research Feed
-	•	Choose your academic domains during onboarding
-	•	Pulls fresh papers directly from arXiv
-	•	Randomized selection to encourage exploration
-	•	Abstracts rendered with MathJax (LaTeX supported)
+Research Pulse keeps track of:
 
-Supported fields include:
-	•	Condensed Matter Physics
-	•	High Energy Physics
-	•	Quantum Physics
-	•	Computer Science
-	•	Mathematics
-	•	Electrical Engineering
-	•	Quantitative Biology
-	•	Quantitative Finance
-	•	Statistics
+* Time reclaimed
+* Papers viewed
+* Daily streaks
+* Academic rank progression
 
-⸻
+Ranks range from Lab Assistant to Nobel Laureate and are based on time redirected toward research.
 
-🧠 Research Gamification (Done Right)
+All progress is stored locally on your machine.
 
-Progress is measured by time reclaimed, not streak anxiety.
+## Research Search
 
-Academic Ranks
-	•	Lab Assistant
-	•	Undergrad
-	•	Graduate
-	•	Postdoc
-	•	Professor
-	•	Nobel
+If a paper sparks a question, you can search the topic directly through Consensus and explore evidence-based answers from the scientific literature.
 
-Includes:
-	•	🔥 Daily streak tracking
-	•	⏱ Minutes saved
-	•	📄 Papers read
-	•	📈 Progress bar per rank
+The extension also remembers recent topics so you can quickly return to them later.
 
-All data is stored locally only via localStorage.
+## Privacy
 
-⸻
+Research Pulse does not collect user data.
 
-🔍 Curiosity Redirection
+* No analytics
+* No tracking
+* No accounts
+* No remote database
 
-Instead of “search dopamine”:
-	•	Ask a research question
-	•	Redirects to Consensus.app for evidence-based answers
-	•	Remembers your last 3 topics for quick re-entry
+All settings and statistics are stored locally using browser storage.
 
-⸻
+## Technical Details
 
-🧯 Grace Mode
-	•	If you really want to doomscroll, you can
-	•	Grants a 5-minute grace window
-	•	No shame — just accountability
+The extension runs entirely in the browser and does not require a backend service.
 
-⸻
+Features include:
 
-🛠 How It Works (Technical Overview)
-	•	Runs entirely as a content script
-	•	Uses DOM scraping on arXiv /list/{category}/new
-	•	Injects MathJax dynamically when needed
-	•	Uses MutationObserver to lock tab title
-	•	Uses favicon injection for visual context switching
-	•	No external libraries
-	•	No analytics
-	•	No tracking
-	•	No backend
+* Detection of supported short-form content platforms
+* arXiv paper retrieval and parsing
+* Dynamic MathJax rendering
+* DOM manipulation and content replacement
+* Local progress tracking
 
-⸻
-
-🔐 Privacy & Ethics
-	•	❌ No user data collection
-	•	❌ No remote servers
-	•	❌ No analytics
-	•	✅ 100% local storage
-	•	✅ Open source by design
-
-Your research habits stay yours.
+Research Pulse is open source and designed to help users discover something worthwhile before falling into an endless scroll.
